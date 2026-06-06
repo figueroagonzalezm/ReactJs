@@ -1,0 +1,41 @@
+.genre-filter {
+  margin-bottom: 1.5rem;
+}
+
+.genre-filter__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 1rem 0;
+}
+
+.genre-filter__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.genre-filter__item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.genre-filter__checkbox {
+  width: 1rem;
+  height: 1rem;
+  cursor: pointer;
+  accent-color: #3b82f6;
+}
+
+.genre-filter__label {
+  font-size: 0.875rem;
+  color: #374151;
+  transition: color 0.2s;
+}
+
+.genre-filter__item:hover .genre-filter__label {
+  color: #111827;
+}

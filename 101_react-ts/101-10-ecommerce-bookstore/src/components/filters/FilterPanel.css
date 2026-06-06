@@ -1,0 +1,32 @@
+.filter-panel {
+  background-color: white;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.filter-panel__header {
+  padding: 1.25rem;
+  border-bottom: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+.filter-panel__title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.filter-panel__content {
+  padding: 1.25rem;
+}
+
+/* Mobile responsive - full width */
+@media (max-width: 1024px) {
+  .filter-panel {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+}

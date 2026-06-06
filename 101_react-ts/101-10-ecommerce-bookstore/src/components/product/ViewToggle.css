@@ -1,0 +1,37 @@
+.view-toggle {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.view-toggle__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #7f8c8d;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.view-toggle__button:hover {
+  background: #ecf0f1;
+  color: #2c3e50;
+}
+
+.view-toggle__button--active {
+  background: #3498db;
+  color: white;
+}
+
+.view-toggle__button--active:hover {
+  background: #2980b9;
+}

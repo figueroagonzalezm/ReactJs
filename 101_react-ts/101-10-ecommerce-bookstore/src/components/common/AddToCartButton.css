@@ -1,0 +1,66 @@
+.add-to-cart-btn {
+  border: none;
+  border-radius: 6px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+}
+
+/* Primary variant - main CTA button */
+.add-to-cart-btn--primary {
+  background-color: #3182ce;
+  color: white;
+}
+
+.add-to-cart-btn--primary:hover:not(:disabled) {
+  background-color: #2c5aa0;
+  transform: translateY(-1px);
+}
+
+/* Secondary variant - less prominent */
+.add-to-cart-btn--secondary {
+  background-color: #e2e8f0;
+  color: #2d3748;
+}
+
+.add-to-cart-btn--secondary:hover:not(:disabled) {
+  background-color: #cbd5e0;
+}
+
+/* Full width option for detail pages */
+.add-to-cart-btn--full {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+/* Success state after adding to cart */
+.add-to-cart-btn--success {
+  background-color: #38a169 !important;
+  color: white !important;
+}
+
+.add-to-cart-btn__icon {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Disabled state (out of stock) */
+.add-to-cart-btn:disabled {
+  background-color: #cbd5e0;
+  color: #a0aec0;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.add-to-cart-btn:active:not(:disabled) {
+  transform: translateY(0);
+}

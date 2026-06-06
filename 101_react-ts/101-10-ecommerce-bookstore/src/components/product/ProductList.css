@@ -1,0 +1,29 @@
+.product-list {
+  width: 100%;
+}
+
+/* Grid View */
+.product-list--grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+/* List View */
+.product-list--list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .product-list--grid {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 1rem;
+  }
+
+  .product-list--list {
+    gap: 1rem;
+  }
+}

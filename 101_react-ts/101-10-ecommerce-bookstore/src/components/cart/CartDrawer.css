@@ -1,0 +1,131 @@
+/* CartDrawer - Slide-in panel for cart contents */
+
+/* Backdrop overlay */
+.cart-drawer__backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.cart-drawer__backdrop--open {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Drawer panel */
+.cart-drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  max-width: 450px;
+  background-color: white;
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+}
+
+.cart-drawer--open {
+  transform: translateX(0);
+}
+
+/* Header */
+.cart-drawer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.cart-drawer__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+  color: #111827;
+}
+
+.cart-drawer__close {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cart-drawer__close:hover {
+  color: #111827;
+}
+
+/* Content area - scrollable */
+.cart-drawer__content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.5rem;
+}
+
+/* Items list */
+.cart-drawer__items {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Clear cart button */
+.cart-drawer__clear {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.cart-drawer__clear:hover {
+  background-color: #fecaca;
+}
+
+/* Footer */
+.cart-drawer__footer {
+  padding: 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+/* Mobile responsive */
+@media (max-width: 640px) {
+  .cart-drawer {
+    max-width: 100%;
+  }
+
+  .cart-drawer__header {
+    padding: 1rem;
+  }
+
+  .cart-drawer__content {
+    padding: 1rem;
+  }
+
+  .cart-drawer__footer {
+    padding: 1rem;
+  }
+}
